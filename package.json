@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "nlw-proffy-server",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -10,13 +10,15 @@
     "typescript": "^3.9.7"
   },
   "scripts": {
-    "start": "tsnd --transpile-only --ignore-watch node_modules --respawn src/server.ts",
+    "start": "ts-node src/server.ts",
+    "dev": "tsnd --transpile-only --ignore-watch node_modules --respawn src/server.ts",
     "knex:migrate": "knex --knexfile knexfile.ts migrate:latest"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "knex": "^0.21.3",
-    "sqlite3": "^5.0.0"
+    "sqlite3": "^5.0.0",
+    "ts-node": "^8.10.2"
   }
 }
